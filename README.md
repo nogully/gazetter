@@ -1,6 +1,4 @@
 # Twitter Gazette
-## Project Name: 
-Twitter Gazette / Gazetter
 
 #### Project Pitch
 - Love the news, but hate the newsfeed?  
@@ -9,7 +7,9 @@ Twitter Gazette / Gazetter
 - The desktop design will mimic that of a print newspaper. The mobile site will have some of the same flourishes as the desktop but be optimized for people on the go.
 
 #### Stack
-React
-Redux
-Router
-Firebase
+- React
+- Redux
+- Router
+- Firebase
+
+Class project for 3rd quarter of the Turing School Front End Engineering program (2018)
