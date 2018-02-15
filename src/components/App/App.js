@@ -4,8 +4,8 @@ import { Route, NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './App.css';
-
-// var provider = new firebase.auth.TwitterAuthProvider();
+// import { signIn } from '../../firebase'
+import { auth, provider } from '../../firebase'
 
 class App extends Component {
   constructor () {
@@ -13,23 +13,35 @@ class App extends Component {
     this.state = {
       email: '', 
       password: '', 
-      error: ''
+      error: '',
+      user: null
     }
   }
 
+  componentDidMount() {
+    //resolved promise from signin is a token and secret
+    //result object
+    //that's the user info that we'll use to the twitter api
+    //populate tweets in the store
+  }
+
+  signIn = () =>  {  
+    return auth.signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        this.setState({user})
+      })
+  }
+
   render() {
+    console.log(this.state.user)
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gazetter</h1>
         </header>
         <div className="login">
-        <p>Log in with Twitter</p>
-          <form>
-            <input type="text" id="email" />
-            <input type="password" id="password" />
-            <input type="submit" id="submit-button" />
-          </form>
+        <button onClick={this.signIn}>Sign in</button>
         </div>
       </div>
     );
@@ -37,3 +49,5 @@ class App extends Component {
 }
 
 export default App;
+
+

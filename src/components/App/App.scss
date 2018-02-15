@@ -1,11 +1,16 @@
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+h1 {
+  font-family: 'UnifrakturCook', cursive;
 }
 
 form {
@@ -33,7 +38,7 @@ input {
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 4rem;
 }
 
 .App-intro {
