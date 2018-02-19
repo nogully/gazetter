@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
-// import * as apiCalls from '../../apiCalls';
+import * as apiCalls from '../../apiCalls';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './App.css';
 import { signIn } from '../../firebase'
 import { auth, provider } from '../../firebase'
+import News from '../News/News.js'
 
-class App extends Component {
+export class App extends Component {
   constructor () {
     super(); 
-    this.state = {
-      user: null
-    }
-  }
-
-  componentDidMount() {
-    //resolved promise from signin is a token and secret
-    //result object
-    //that's the user info that we'll use to the twitter api
-    //populate tweets in the store
   }
 
   signIn = () =>  {  
@@ -32,9 +23,8 @@ class App extends Component {
   fetchTweets = async () => {
     const response = await fetch('/api/gettweets');
     const data = await response.json();
-      console.log(data);
-    
-    // this.setState({data})
+    console.log(data);
+    this.setState({data})
   }
 
   render() {
@@ -44,14 +34,22 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gazetter</h1>
         </header>
-        <div className="login">
-        <button onClick={this.signIn}>Sign in</button>
+        <div className="sign-in">
+          <button onClick={this.signIn}>Sign in</button>
         </div>
       </div>
     );
   }
 }
+export const mapStateToProps = (state) => ({
+  user: store.user;
+  tweets: store.tweets;
+})
 
-export default App;
+export const mapDispatchToProps = () => ({
+  addUser: user => dispatch(addUser(user))
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 
 
