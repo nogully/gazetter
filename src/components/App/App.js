@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './App.css';
 import { signIn } from '../../firebase'
-import { auth, provider } from '../../firebase'
+import { auth, provider } from '../../firebase';
+import { logIn, populateTweets } from '../../actions/actions'
 import News from '../News/News.js'
 
 export class App extends Component {
@@ -16,7 +17,7 @@ export class App extends Component {
   signIn = () =>  {  
     return auth.signInWithPopup(provider)
       .then((user) => {
-        this.setState({user});
+        this.props.logIn(user);
       }).then(this.fetchTweets())
   }
 
@@ -24,7 +25,7 @@ export class App extends Component {
     console.log('hi i am fetchTweets')
     const response = await fetch('http://localhost:3001/api/gettweets');
     const data = await response.json()
-    console.log(await data);
+    this.props.populateTweets(data)
   }
 
   render() {
@@ -41,13 +42,14 @@ export class App extends Component {
     );
   }
 }
-export const mapStateToProps = (state) => ({
-  // user: store.user,
-  // tweets: store.tweets
+export const mapStateToProps = (store) => ({
+  user: store.user,
+  tweets: store.tweets
 })
 
-export const mapDispatchToProps = () => ({
-  // addUser: user => dispatch(addUser(user))
+export const mapDispatchToProps = (dispatch) => ({
+  logIn: user => dispatch(logIn(user)), 
+  populateTweets: tweets => dispatch(populateTweets(tweets))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
