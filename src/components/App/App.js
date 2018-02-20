@@ -23,7 +23,8 @@ export class App extends Component {
   fetchTweets = async () => {
     console.log('hi i am fetchTweets')
     const response = await fetch('http://localhost:3001/api/gettweets');
-    console.log(response);
+    const data = await response.json()
+    console.log(await data);
   }
 
   render() {
