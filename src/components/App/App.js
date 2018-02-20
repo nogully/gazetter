@@ -21,10 +21,10 @@ export class App extends Component {
   }
 
   fetchTweets = async () => {
-    const response = await fetch('/api/gettweets');
-    const data = await response.json();
-    console.log(data);
-    this.setState({data})
+    console.log('hi i am fetchTweets')
+    const response = await fetch('http://localhost:3001/api/gettweets');
+    const data = await response.json()
+    console.log(await data);
   }
 
   render() {
@@ -42,12 +42,12 @@ export class App extends Component {
   }
 }
 export const mapStateToProps = (state) => ({
-  user: store.user;
-  tweets: store.tweets;
+  // user: store.user,
+  // tweets: store.tweets
 })
 
 export const mapDispatchToProps = () => ({
-  addUser: user => dispatch(addUser(user))
+  // addUser: user => dispatch(addUser(user))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

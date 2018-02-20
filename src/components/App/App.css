@@ -9,8 +9,17 @@
   flex-direction: column; }
 
 h1 {
-  font-family: 'UnifrakturCook', cursive; 
-}
+  font-family: 'UnifrakturCook', cursive; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  align-items: center; }
+
+input {
+  margin: 20px; }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
