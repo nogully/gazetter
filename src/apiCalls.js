@@ -1,9 +1,8 @@
-export const fetchTweets = async (token, secret) => {
+export const getTweets = async (token, secret) => {
   try {
-    const response = await fetch(`https://api.twitter.com`)
+    const response = await fetch('http://localhost:3001/api/gettweets')
     const parsed = await response.json();
     if (response) {
-      console.log(parsed)
       return parsed;    
     } else {
       throw new Error("Error in fetchTweets");

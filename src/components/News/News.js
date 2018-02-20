@@ -1,12 +1,31 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
+import './News.css'
 // import PropTypes from 'prop-types';
-// import './News.css'
 
-// export class News extends Component {
-//   constructor() {
-//     super();
-//   }
-// }
+export class News extends Component {
 
-// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(News))
+  tweetCards = () => {
+    const { tweets } = this.props;
+    return tweets.map( tweet => {
+      return <p>{tweet.text}</p>
+    })
+     
+  }
+
+  render() {
+    return (
+      <div>
+      <h1> News </h1>
+      {this.tweetCards()}
+      </div>
+    )
+  }
+}
+
+export const mapStateToProps = (store) => ({
+  tweets: store.tweets
+})
+
+export default withRouter(connect(mapStateToProps, null)(News))
