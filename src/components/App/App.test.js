@@ -1,12 +1,11 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import App from './App';
 
 describe('App', () => {
-  it.skip('should match snapshot', () => {
-    const renderedComponent = shallow(<App />);
+  it('should match snapshot', () => {
+    const wrapper = shallow(<App />);
 
-    expect(renderedComponent).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   })
 })
