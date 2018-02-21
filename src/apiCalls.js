@@ -5,10 +5,10 @@ export const getTweets = async (token, secret) => {
     if (response) {
       return parsed;    
     } else {
-      throw new Error("Error in fetchTweets");
+      throw new Error("Error in getTweets");
     }
   } catch (error) { 
-    throw new Error("Error in fetchTweets");
+    throw new Error("Error in getTweets");
   }
 };
 
