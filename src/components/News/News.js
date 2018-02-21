@@ -9,14 +9,18 @@ export class News extends Component {
   tweetCards = () => {
     const { tweets } = this.props;
     return tweets.map( tweet => {
-      return <p>{tweet.text}</p>
-    })
+      return (
+        <div className="tweet" key={tweet.id}>
+          <p>{tweet.text}</p> 
+          <h5>– @{tweet.user.name}</h5> 
+        </div>
+      )})
      
   }
 
   render() {
     return (
-      <div>
+      <div className="News">
       <h1> News </h1>
       {this.tweetCards()}
       </div>

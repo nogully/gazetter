@@ -30,7 +30,7 @@ export class App extends Component {
           <h1 className="App-title">Gazetter</h1>
         </header>
         <div className="sign-in">
-         <button onClick={this.signIn}>Sign in</button>
+         { !this.props.tweets.length ? <button onClick={this.signIn}>Sign in</button> : null }
         </div>
         <Route path='/news' component={News} />
       </div>

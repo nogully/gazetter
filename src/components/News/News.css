@@ -1,0 +1,22 @@
+.News {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tweet {
+  border: 1px solid gray;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+}
+
+p {
+  margin: 0px;
+}
+
+h5 {
+  margin: 0px;
+}
