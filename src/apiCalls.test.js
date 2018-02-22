@@ -18,7 +18,7 @@ describe('apiCalls', () => {
       })
     })
 
-    it('should make an api call to a local server via fetch', () => {
+    it('should make an api call to an exp ress server via fetch', () => {
       const expectedUrl = 'http://localhost:3001/api/gettweets'
       apiCalls.getTweets();
       expect(window.fetch).toHaveBeenCalledWith(expectedUrl)
