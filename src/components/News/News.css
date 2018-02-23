@@ -1,13 +1,16 @@
 .News {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   text-align: center;
+  width: 1000px;
+  height: 600px;
+  flex-direction: column;    
+  justify-content: flex-start;
 }
 
 .tweet {
-  border: 1px solid gray;
+  border-bottom: 1px solid #00aced;
   padding: 20px;
   margin: 10px;
   width: 300px;

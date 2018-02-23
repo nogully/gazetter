@@ -21,7 +21,6 @@ export class News extends Component {
   render() {
     return (
       <div className="News">
-      <h1> News </h1>
       {this.tweetCards()}
       </div>
     )

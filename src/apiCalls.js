@@ -11,4 +11,3 @@ export const getTweets = async (token, secret) => {
     throw new Error("Error in getTweets");
   }
 };
-
