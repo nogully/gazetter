@@ -22,6 +22,15 @@ p {
   text-align: left;
   }
 
+h2 {
+  font-family: 'Merriweather', serif;
+  color: #31424B;
+  margin: 0px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: left;
+}
+
 h5 {
   font-family: 'Merriweather', serif;
   color: #31424B;
