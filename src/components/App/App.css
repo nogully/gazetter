@@ -12,19 +12,21 @@
 h1 {
   font-family: 'UnifrakturCook', cursive; }
 
-form {
+.User {
   display: flex;
-  flex-direction: column;
-  width: 30%;
   justify-content: center;
-  align-items: center; }
-
-input {
-  margin: 20px; }
+  align-items: center;
+  flex-direction: column; 
+  margin-top: 20px; 
+}
 
 img {
   display: block;
   text-align: center;
+}
+
+button {
+  margin: 20px;
 }
 
 .App-logo {

@@ -37,7 +37,7 @@ export class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gazetter</h1>
         </header>
-        <div className="sign-in">
+        <div className="User">
          { !this.props.tweets.length ? <button onClick={this.signIn}>Sign in</button> : null }
          { this.state.loading && !this.props.tweets.length ? <img src="./newspapers.gif" alt="newspapers" /> : null }
         </div>
