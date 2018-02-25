@@ -12,11 +12,13 @@ export const getTweets = async (token, secret) => {
   }
 };
 
+
 export const cleanTweets = (tweets) => {
   if (tweets === null) {
     return undefined;
   }
-  return tweets.map(tweet => {
+  const filtered = tweets.filter(tweet => tweet.user.screen_name.toLowerCase() === 'washingtonpost' || 'nytimes' || 'latimes' || 'newyorker' );
+  return filtered.map(tweet => {
     const {
       id,
       full_text,
@@ -32,10 +34,6 @@ export const cleanTweets = (tweets) => {
       user, 
       retweeted_status, 
       favorite_count
-    };
+    }
   });
-};
-
-export const newsFilter = () => {
-
 };
