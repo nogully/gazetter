@@ -21,6 +21,11 @@ form {
 input {
   margin: 20px; }
 
+img {
+  display: block;
+  text-align: center;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px; }

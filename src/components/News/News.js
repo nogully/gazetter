@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import './News.css'
-// import PropTypes from 'prop-types';
+import { array } from 'prop-types';
 
 export class News extends Component {
 
@@ -11,8 +11,9 @@ export class News extends Component {
     return tweets.map( tweet => {
       return (
         <div className="tweet" key={tweet.id}>
-          <p>{tweet.text}</p> 
-          <h5>– @{tweet.user.name}</h5> 
+          { tweet.entities.media ? <img src={tweet.entities.media[0].media_url} alt="tweet"/> : null }
+          <p>{tweet.full_text}</p> 
+          <h5>– {tweet.user.name}</h5> 
         </div>
       )})
      
@@ -21,7 +22,6 @@ export class News extends Component {
   render() {
     return (
       <div className="News">
-      <h1> News </h1>
       {this.tweetCards()}
       </div>
     )
@@ -31,5 +31,9 @@ export class News extends Component {
 export const mapStateToProps = (store) => ({
   tweets: store.tweets
 })
+
+News.propTypes = {
+  tweets: array
+}
 
 export default withRouter(connect(mapStateToProps, null)(News))
