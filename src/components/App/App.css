@@ -1,6 +1,9 @@
 .App {
   text-align: center;
   font-family: 'Open Sans', sans-serif; 
+  background-image: url("./newspaper.jpg");
+  background-repeat: repeat;
+  height: 100vh;
 }
 
 .login {
