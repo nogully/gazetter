@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 import './News.css'
 import { array } from 'prop-types';
+import Article from '../Article/Article'
 
 export class News extends Component {
 
@@ -10,13 +11,7 @@ export class News extends Component {
     const { tweets } = this.props;
     return tweets.map( tweet => {
       return (
-        <div className="tweet" key={tweet.id}>
-          { tweet.entities.media ? <img src={tweet.entities.media[0].media_url} alt="tweet"/> : null }
-          <h2>{tweet.user.name}</h2> 
-          <p>{tweet.full_text}</p> 
-          { tweet.entities.urls[0].expanded_url ? <a href={tweet.entities.urls[0].expanded_url} target="_blank">Article</a> : null}
-          <h5><i className="fas fa-heart"></i> {tweet.favorite_count}</h5>
-        </div>
+        <Article tweet={tweet} />
       )})
      
   }
@@ -24,7 +19,7 @@ export class News extends Component {
   render() {
     return (
       <div className="News">
-      {this.tweetCards()}
+      { this.tweetCards() }
       </div>
     )
   }
