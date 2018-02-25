@@ -1,47 +1,49 @@
 .App {
   text-align: center;
   font-family: 'Open Sans', sans-serif; 
+  background-image: url("./newspaper.jpg");
+  background-repeat: repeat;
+  height: 100vh;
 }
 
-.login {
+h1 {
+  font-family: 'UnifrakturCook', cursive; 
+}
+
+.User {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
-
-h1 {
-  font-family: 'UnifrakturCook', cursive; }
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  justify-content: center;
-  align-items: center; }
-
-input {
-  margin: 20px; }
+  flex-direction: column; 
+  margin-top: 20px; 
+}
 
 img {
   display: block;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+button {
+  border: none;
+  border-radius: 15px;
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  background-color: #00aced;
+  margin: 20px;
+  padding: 10px 20px;
+  word-spacing: 2px;
+}
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white; }
 
 .App-title {
-  font-size: 4rem; }
-
-.App-intro {
-  font-size: large; }
+  font-size: 4rem;
+  margin: 20px; }
 
 @keyframes App-logo-spin {
   from {
