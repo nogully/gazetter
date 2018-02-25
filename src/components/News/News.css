@@ -1,12 +1,11 @@
 .News {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   text-align: center;
-  width: 1000px;
-  height: 600px;
-  flex-direction: column;    
-  justify-content: flex-start;
+  max-width: 1000px;
+  flex-direction: row;    
+  justify-content: center;
+  margin: 0;
 }
 
 .tweet {
@@ -22,6 +21,15 @@ p {
   line-height: 1.5em;
   text-align: left;
   }
+
+h2 {
+  font-family: 'Merriweather', serif;
+  color: #31424B;
+  margin: 0px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: left;
+}
 
 h5 {
   font-family: 'Merriweather', serif;
