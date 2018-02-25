@@ -6,14 +6,9 @@
   height: 100vh;
 }
 
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
-
 h1 {
-  font-family: 'UnifrakturCook', cursive; }
+  font-family: 'UnifrakturCook', cursive; 
+}
 
 .User {
   display: flex;
@@ -29,24 +24,26 @@ img {
 }
 
 button {
+  border: none;
+  border-radius: 15px;
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  background-color: #00aced;
   margin: 20px;
+  padding: 10px 20px;
+  word-spacing: 2px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white; }
 
 .App-title {
-  font-size: 4rem; }
-
-.App-intro {
-  font-size: large; }
+  font-size: 4rem;
+  margin: 20px; }
 
 @keyframes App-logo-spin {
   from {
