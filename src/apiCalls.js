@@ -12,12 +12,6 @@ export const getTweets = async (token, secret) => {
   }
 };
 
-const newsOutlets = [
-'NYTimes', 
-'washingtonpost', 
-'latimes',
-]
-
 export const cleanTweets = (tweets) => {
   if (tweets === null) {
     return undefined;
