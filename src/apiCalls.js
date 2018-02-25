@@ -3,15 +3,39 @@ export const getTweets = async (token, secret) => {
     const response = await fetch('http://localhost:3001/api/gettweets')
     const parsed = await response.json();
     if (response) {
-      return parsed;    
+      return cleanTweets(parsed);    
     } else {
-      throw new Error("Error in getTweets");
+      throw new Error("Error getting tweets");
     }
   } catch (error) { 
-    throw new Error("Error in getTweets");
+    throw (error);
   }
 };
 
 export const cleanTweets = (tweets) => {
-  
-}
+  if (tweets === null) {
+    return undefined;
+  }
+  return tweets.map(tweet => {
+    const {
+      id,
+      full_text,
+      entities, 
+      user, 
+      retweeted_status, 
+      favorite_count
+    } = tweet;
+    return {
+      id,
+      full_text, 
+      entities, 
+      user, 
+      retweeted_status, 
+      favorite_count
+    };
+  });
+};
+
+export const newsFilter = () => {
+
+};

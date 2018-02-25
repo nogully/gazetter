@@ -11,7 +11,7 @@ export class News extends Component {
     return tweets.map( tweet => {
       return (
         <div className="tweet" key={tweet.id}>
-          <img src={tweet.entities.media[0].media_url}/>
+          { tweet.entities.media ? <img src={tweet.entities.media[0].media_url} alt="tweet"/> : null }
           <p>{tweet.full_text}</p> 
           <h5>– {tweet.user.name}</h5> 
         </div>

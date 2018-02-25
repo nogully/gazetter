@@ -17,12 +17,21 @@
 }
 
 p {
+  font-family: 'Merriweather', serif;
   margin: 0px;
-}
+  line-height: 1.5em;
+  text-align: left;
+  }
 
 h5 {
+  font-family: 'Merriweather', serif;
   color: #31424B;
   margin: 0px;
   font-weight: 700;
   font-variant: small-caps;
+  text-align: right;
+}
+
+img {
+  width: 300px;
 }
