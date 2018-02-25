@@ -1,0 +1,17 @@
+section {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.article-link {
+  color: #00aced;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  text-align: left;
+}
+
+h5 {
+  display: inline-block;
+  text-align: right;
+}
