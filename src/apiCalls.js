@@ -12,12 +12,19 @@ export const getTweets = async (token, secret) => {
   }
 };
 
+const newsOutlets = [
+'NYTimes', 
+'washingtonpost', 
+'latimes',
+]
 
 export const cleanTweets = (tweets) => {
   if (tweets === null) {
     return undefined;
   }
-  const filtered = tweets.filter(tweet => tweet.user.screen_name.toLowerCase() === 'washingtonpost' || 'nytimes' || 'latimes' || 'newyorker' );
+
+  const filtered = tweets.filter(tweet => newsOutlets.indexOf(tweet.user.screen_name) >= 0 );
+  
   return filtered.map(tweet => {
     const {
       id,
