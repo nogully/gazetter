@@ -1,4 +1,4 @@
-export default const newsOutlets = [
+export const newsOutlets = [
 'nytimes', 
 'washingtonpost', 
 'latimes',
@@ -41,5 +41,17 @@ export default const newsOutlets = [
 'sfgate',
 'thr',
 'newsweek', 
-'foxnews'
+'foxnews',
+'techreview', 
+'propublica',
+'msnbc', 
+'theeconomist',
+'france24',
+'pri',
+'npr',
+'nytscience',
+'foreignaffairs',
+'ap',
+'outsidemagazine',
+'motherjones'
 ]

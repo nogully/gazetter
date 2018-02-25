@@ -1,3 +1,4 @@
+import {newsOutlets} from './newsOutlets'
 export const getTweets = async (token, secret) => {
   try {
     const response = await fetch('http://localhost:3001/api/gettweets')
@@ -17,7 +18,7 @@ export const cleanTweets = (tweets) => {
     return undefined;
   }
 
-  const filtered = tweets.filter(tweet => newsOutlets.indexOf(tweet.user.screen_name) >= 0 );
+  const filtered = tweets.filter(tweet => newsOutlets.indexOf(tweet.user.screen_name.toLowerCase()) >= 0 );
   
   return filtered.map(tweet => {
     const {
@@ -36,5 +37,5 @@ export const cleanTweets = (tweets) => {
       retweeted_status, 
       favorite_count
     }
-  });
+  }).sort((a, b) => b.favorite_count - a.favorite_count);
 };
