@@ -21,5 +21,8 @@ p {
 }
 
 h5 {
+  color: #31424B;
   margin: 0px;
+  font-weight: 700;
+  font-variant: small-caps;
 }
