@@ -30,7 +30,7 @@ export const mapStateToProps = (store) => ({
 })
 
 News.propTypes = {
-  tweets: array
+  tweets: array.isRequired
 }
 
 export default withRouter(connect(mapStateToProps, null)(News))
