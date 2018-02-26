@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 import { auth } from '../../firebase';
-import { logOut, populateTweets } from '../../actions/actions'
-import News from '../News/News.js'
-import Welcome from '../Welcome/Welcome.js'
+import { logOut, populateTweets } from '../../actions/actions';
+import News from '../News/News.js';
+import Welcome from '../Welcome/Welcome.js';
 import { Route, withRouter, NavLink } from 'react-router-dom';
-import today from '../../dateHelper'
+import today from '../../dateHelper';
 import { array, object, func } from 'prop-types';
 
 export class App extends Component {
@@ -17,21 +17,20 @@ export class App extends Component {
   }
 
   fillHeader = () => {
-    const user = 'noragully'
+    const user = 'noragully';
     return (
       <div className='user-header'>
-          <NavLink to='/' className="App-title">Gazetter</NavLink>
+        <NavLink to='/' className="App-title">Gazetter</NavLink>
         <div className="header-bottom">
-          <p id='motto'>All the news that's fit to tweet</p>
+          <p id='motto'>All the news that&apos;s fit to tweet</p>
           <p id="date">Last updated: { today }</p>
           <NavLink to="/" id="signout" onClick={this.logOut}>
             Sign out @{user}
           </NavLink>
         </div>
-        
       </div>
-    )
-  }
+    );
+  };
 
   render() {
     const { tweets } = this.props;
@@ -51,19 +50,19 @@ export class App extends Component {
 export const mapStateToProps = (store) => ({
   user: store.user,
   tweets: store.tweets
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   logOut: () => dispatch(logOut()), 
   populateTweets: tweets => dispatch(populateTweets(tweets))
-})
+});
 
 App.propTypes = {
   tweets: array.isRequired, 
   user: object.isRequired, 
   logOut: func.isRequired, 
   populateTweets: func.isRequired
-}
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 

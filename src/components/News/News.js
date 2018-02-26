@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
-import './News.css'
+import { withRouter } from 'react-router-dom';
+import './News.css';
 import { array } from 'prop-types';
-import Article from '../Article/Article'
+import Article from '../Article/Article';
 
 export class News extends Component {
 
@@ -12,24 +12,25 @@ export class News extends Component {
     return tweets.map( tweet => {
       return (
         <Article key={tweet.id} tweet={tweet} />
-      )})
-  }
+      );
+    });
+  };
 
   render() {
     return (
       <div className="News">
-      { this.tweetCards() }
+        { this.tweetCards() }
       </div>
-    )
+    );
   }
 }
 
 export const mapStateToProps = (store) => ({
   tweets: store.tweets
-})
+});
 
 News.propTypes = {
   tweets: array.isRequired
-}
+};
 
-export default withRouter(connect(mapStateToProps, null)(News))
+export default withRouter(connect(mapStateToProps, null)(News));
