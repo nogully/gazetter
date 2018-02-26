@@ -11,6 +11,15 @@ describe ('actions', () => {
     })
   })
 
+  describe('logOut', () => {
+    it('should take a user object and return an action obj with an empty user as the payload', () => {
+      const expected = { type: 'LOG_OUT'
+                       }
+      expect(actions.logOut()).toEqual(expected)
+    })
+  })
+
+
   describe('populateTweets', () => {
     it('should take the tweets array and return an action obj with the tweets as payload', () => {
       const mockTweets = [{ 

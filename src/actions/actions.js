@@ -3,6 +3,10 @@ export const logIn = user => ({
   user 
 })
 
+export const logOut = () => ({
+  type: 'LOG_OUT'
+})
+
 export const populateTweets = tweets => ({
   type: 'POPULATE_TWEETS',
   tweets

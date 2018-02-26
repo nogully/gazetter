@@ -2,11 +2,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App, mapStateToProps, mapDispatchToProps } from './App';
+import { auth } from '../../firebase';
 
 describe('App', () => {
   it('should match snapshot', () => { 
-    const wrapper = shallow(<App tweets={ [] } user={ {} } logIn={ jest.fn() } populateTweets={ jest.fn() }/>);
+    const wrapper = shallow(<App tweets={ [] } user={ {} } logOut={ jest.fn() } populateTweets={ jest.fn() }/>);
     expect(wrapper).toMatchSnapshot();
+  })
+
+  describe('signOut', () => {  
+    it('should sign out using Firebase', () => {
+      const wrapper = shallow(<App tweets={ [] } user={ {} } logOut={ jest.fn() } populateTweets={ jest.fn() }/>);
+      auth.signOut = jest.fn()
+      wrapper.instance().logOut();
+      expect(auth.signOut).toHaveBeenCalled()
+    })
   })
 
   describe('mapStateToProps', () => {
@@ -38,10 +48,10 @@ describe('App', () => {
   })
 
   describe('mapDispatchToProps', () => {
-    it('should call the Redux dispatch method with logIn', () => {
+    it('should call the Redux dispatch method with logOut', () => {
       const mockDispatch = jest.fn()
       const mapped = mapDispatchToProps(mockDispatch);
-      mapped.logIn();
+      mapped.logOut();
       expect(mockDispatch).toHaveBeenCalled();
     })
 

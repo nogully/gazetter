@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 import { auth } from '../../firebase';
-import { logIn, populateTweets } from '../../actions/actions'
+import { logOut, populateTweets } from '../../actions/actions'
 import News from '../News/News.js'
 import Welcome from '../Welcome/Welcome.js'
 import { Route, withRouter, NavLink } from 'react-router-dom';
@@ -10,11 +10,10 @@ import today from '../../dateHelper'
 import { array, object, func } from 'prop-types';
 
 export class App extends Component {
-
   logOut = () => {
     auth.signOut();
-    this.props.logIn({})
-    this.props.populateTweets([])
+    this.props.logOut();
+    this.props.populateTweets([]);
   }
 
   fillHeader = () => {
@@ -55,14 +54,14 @@ export const mapStateToProps = (store) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  logIn: user => dispatch(logIn(user)), 
+  logOut: () => dispatch(logOut()), 
   populateTweets: tweets => dispatch(populateTweets(tweets))
 })
 
 App.propTypes = {
   tweets: array.isRequired, 
   user: object.isRequired, 
-  logIn: func.isRequired, 
+  logOut: func.isRequired, 
   populateTweets: func.isRequired
 }
 

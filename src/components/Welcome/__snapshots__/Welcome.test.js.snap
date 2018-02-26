@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Welcome
+    logIn={[Function]}
+    populateTweets={[Function]}
+    tweets={Array []}
+    user={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          id="tagline"
+>
+          "All the news that's fit to tweet"
+</p>,
+        <button
+          onClick={[Function]}
+>
+          Sign in with 
+          <i
+                    className="fab fa-twitter"
+          />
+           Twitter
+</button>,
+        null,
+      ],
+      "className": "Welcome",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "\\"All the news that's fit to tweet\\"",
+          "id": "tagline",
+        },
+        "ref": null,
+        "rendered": "\\"All the news that's fit to tweet\\"",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Sign in with ",
+            <i
+              className="fab fa-twitter"
+/>,
+            " Twitter",
+          ],
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Sign in with ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fab fa-twitter",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          " Twitter",
+        ],
+        "type": "button",
+      },
+      null,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            id="tagline"
+>
+            "All the news that's fit to tweet"
+</p>,
+          <button
+            onClick={[Function]}
+>
+            Sign in with 
+            <i
+                        className="fab fa-twitter"
+            />
+             Twitter
+</button>,
+          null,
+        ],
+        "className": "Welcome",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "\\"All the news that's fit to tweet\\"",
+            "id": "tagline",
+          },
+          "ref": null,
+          "rendered": "\\"All the news that's fit to tweet\\"",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Sign in with ",
+              <i
+                className="fab fa-twitter"
+/>,
+              " Twitter",
+            ],
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Sign in with ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fab fa-twitter",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            " Twitter",
+          ],
+          "type": "button",
+        },
+        null,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

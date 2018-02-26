@@ -13,7 +13,6 @@ export class News extends Component {
       return (
         <Article key={tweet.id} tweet={tweet} />
       )})
-     
   }
 
   render() {
