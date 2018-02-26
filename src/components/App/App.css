@@ -50,6 +50,14 @@ button {
   word-spacing: 2px;
 }
 
+button:hover {
+  background-color: #0084b4;
+}
+
+button:active {
+  background-color: #1dcaff;
+}
+
 .loading-gif {
   margin: 20px;
 }
@@ -81,7 +89,7 @@ button {
   width: 100%;
 }
 
-#motto, #tagline {
+#motto, #tagline, #signout {
   font-family: 'Merriweather', serif;
   font-style: italic;
   text-align: center;
@@ -91,13 +99,19 @@ button {
   text-decoration: none;
 }
 
+#signout:hover {
+  color: #00aced;
+}
+
+#signout:active {
+  color: #1dcaff;
+  text-decoration: underline;
+}
+
 #tagline {
   font-size: 2em;
   color: #444;
 }
-
-.App-title {
-  }
 
 @keyframes App-logo-spin {
   from {

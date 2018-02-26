@@ -25,7 +25,7 @@ export class App extends Component {
         <div className="header-bottom">
           <p id='motto'>All the news that's fit to tweet</p>
           <p id="date">Last updated: { today }</p>
-          <NavLink to="/" id="motto" onClick={this.logOut}>
+          <NavLink to="/" id="signout" onClick={this.logOut}>
             Sign out @{user}
           </NavLink>
         </div>

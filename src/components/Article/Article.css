@@ -5,15 +5,30 @@ section {
 }
 
 .article-link {
-  color: #00aced;
+  color: #0084b4;
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
   text-align: left;
+  font-size: 1rem;
+}
+
+.article-link:hover {
+  color: #00aced;
+}
+
+.article-link:active {
+  color: #1dcaff;
+  text-decoration: underline;
 }
 
 h5 {
   display: inline-block;
   text-align: right;
-  color: #444;
+  color: #0084b4;
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+img {
+  border-bottom: 10px;
 }
