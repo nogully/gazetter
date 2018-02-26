@@ -39,7 +39,8 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          { tweets.length ? this.fillHeader() : <NavLink to='/' className="App-title">Gazetter</NavLink> }
+          { tweets.length ? this.fillHeader() : 
+            <NavLink to='/' className="App-title">Gazetter</NavLink> }
         </header>
         <Route exact path='/' component={Welcome} />
         <Route path='/news' component={News} />
