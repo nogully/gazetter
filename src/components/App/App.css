@@ -14,10 +14,17 @@
   text-decoration: none;
 }
 
-.Welcome {
+.Welcome, 
+.App-header,
+.user-header, 
+.header-bottom  {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Welcome {
+  
   flex-direction: column; 
   margin-top: 20px; 
 }
@@ -67,25 +74,16 @@ button:active {
   height: 150px;
   padding: 20px;
   color: white; 
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .user-header {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
 .header-bottom {
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
