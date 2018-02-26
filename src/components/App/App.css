@@ -6,12 +6,15 @@
   height: 100vh;
 }
 
-h1 {
+.App-title {
   color: ghostwhite;
   font-family: 'UnifrakturCook', cursive; 
+  font-size: 4rem;
+  margin: 10px; 
+  text-decoration: none;
 }
 
-.User {
+.Welcome {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,15 +25,17 @@ h1 {
 img {
   display: block;
   text-align: center;
-  margin: 10px;
 }
 
 #date {
-  color: ghostwhite;
+  color: #CCC;
   text-align: center;
   border-top: 1px solid ghostwhite;
   padding-top: 10px;
-  width: 60%;
+  width: 100%;
+  font-style: italic;
+  padding: 10px;
+  margin: 10px;
 }
 
 button {
@@ -45,6 +50,10 @@ button {
   word-spacing: 2px;
 }
 
+.loading-gif {
+  margin: 20px;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -56,9 +65,39 @@ button {
   justify-content: center;
 }
 
+.user-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#motto, #tagline {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  color: #CCC;
+  text-decoration: none;
+}
+
+#tagline {
+  font-size: 2em;
+  color: #444;
+}
+
 .App-title {
-  font-size: 4rem;
-  margin: 20px; }
+  }
 
 @keyframes App-logo-spin {
   from {

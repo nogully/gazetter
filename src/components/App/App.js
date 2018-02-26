@@ -5,44 +5,43 @@ import './App.css';
 import { auth, provider } from '../../firebase';
 import { logIn, populateTweets } from '../../actions/actions'
 import News from '../News/News.js'
-import { Route, withRouter } from 'react-router-dom';
-import   today from '../../dateHelper'
+import Welcome from '../Welcome/Welcome.js'
+import { Route, withRouter, NavLink } from 'react-router-dom';
+import today from '../../dateHelper'
 // import PropTypes from 'prop-types';
 
 export class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      loading: false
-    }
+
+  logOut = () => {
+    this.props.logIn({})
+    this.populateTweets([])
   }
 
-  signIn = () =>  {  
-    this.setState( {loading: true} );
-    return auth.signInWithPopup(provider)
-      .then((user) => {
-        this.props.logIn(user);
-      }).then(this.fetchTweets())
-  }
-
-  fetchTweets = async () => {
-    const tweets = await api.getTweets();
-    this.props.populateTweets(tweets)
-    this.props.history.push('/news')
+  fillHeader = () => {
+    const user = 'noragully'
+    return (
+      <div className='user-header'>
+          <NavLink to='/' className="App-title">Gazetter</NavLink>
+        <div className="header-bottom">
+          <p id='motto'>All the news that's fit to tweet</p>
+          <p id="date">Last updated: { today }</p>
+          <NavLink to="/" id="motto" onClick={this.logOut}>
+            Sign out @{user}
+          </NavLink>
+        </div>
+        
+      </div>
+    )
   }
 
   render() {
-    console.log(this.props.tweets.length)
+    const { tweets } = this.props;
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gazetter</h1>
-          {this.props.tweets.length? <p id="date">Last updated: { today }</p> : null }
+          { tweets.length ? this.fillHeader() : <NavLink to='/' className="App-title">Gazetter</NavLink> }
         </header>
-        <div className="User">
-         { !this.props.tweets.length ? <button onClick={this.signIn}>Sign in with <i className="fab fa-twitter"></i> Twitter</button> : null }
-         { this.state.loading && !this.props.tweets.length ? <img src="./newspapers.gif" alt="newspapers" /> : null }
-        </div>
+        <Route exact path='/' component={Welcome} />
         <Route path='/news' component={News} />
       </div>
     );
