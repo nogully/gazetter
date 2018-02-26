@@ -67,11 +67,12 @@ describe('App', () => {
       wrapper.instance().signIn();
       expect(auth.signInWithPopup).toHaveBeenCalledWith(provider);
     })
-
   })
 
   describe('fetchTweets', () => {
-
+    it('should call an api', () => {
+      
+    })
   })
 
   describe('mapStateToProps', () => {

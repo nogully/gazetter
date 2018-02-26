@@ -24,9 +24,13 @@ export class Welcome extends Component {
   }
 
   fetchTweets = async () => {
-    const tweets = await api.getTweets();
-    this.props.populateTweets(tweets)
-    this.props.history.push('/news')
+    try {
+      const tweets = await api.getTweets();
+      this.props.populateTweets(tweets)
+      this.props.history.push('/news')
+    } catch (error) {
+      throw (error)
+    }
   }
 
   render() {
