@@ -6,6 +6,7 @@ import { auth, provider } from '../../firebase';
 import { logIn, populateTweets } from '../../actions/actions'
 import News from '../News/News.js'
 import { Route, withRouter } from 'react-router-dom';
+import { today } from '../../dateHelper'
 // import PropTypes from 'prop-types';
 
 export class App extends Component {
@@ -36,6 +37,7 @@ export class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gazetter</h1>
+          {this.props.tweets.length? <p id="date">{ today }</p> : null }
         </header>
         <div className="User">
          { !this.props.tweets.length ? <button onClick={this.signIn}>Sign in with <i className="fab fa-twitter"></i> Twitter</button> : null }

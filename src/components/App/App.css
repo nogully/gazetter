@@ -7,6 +7,7 @@
 }
 
 h1 {
+  color: ghostwhite;
   font-family: 'UnifrakturCook', cursive; 
 }
 
@@ -23,6 +24,14 @@ img {
   text-align: center;
 }
 
+#date {
+  color: ghostwhite;
+  text-align: center;
+  border-top: 1px solid ghostwhite;
+  padding-top: 10px;
+  width: 60%;
+}
+
 button {
   border: none;
   border-radius: 15px;
@@ -37,9 +46,14 @@ button {
 
 .App-header {
   background-color: #222;
-  height: 100px;
+  height: 150px;
   padding: 20px;
-  color: white; }
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .App-title {
   font-size: 4rem;
