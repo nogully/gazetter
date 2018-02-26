@@ -10,19 +10,18 @@ const Article = ({tweet}) => {
       <h2>{tweet.user.name}</h2> 
       <p>{tweet.full_text}</p> 
       <section >
-      { tweet.entities.urls.length ? 
-        <a className="article-link" href={ tweet.entities.urls[0].expanded_url } target="_blank">
-          <i className="fas fa-newspaper"></i> Read
-        </a> : null }
-      <h5 className="favorite"><i className="fas fa-heart"></i> {tweet.favorite_count}</h5>
+        { tweet.entities.urls.length ? 
+          <a className="article-link" href={ tweet.entities.urls[0].expanded_url } target="_blank">
+            <i className="fas fa-newspaper"></i> Read
+          </a> : null }
+        <h5 className="favorite"><i className="fas fa-heart"></i> {tweet.favorite_count}</h5>
       </section>
     </article>
-
-  )
-}
+  );
+};
 
 Article.propTypes = {
   tweet: object.isRequired
-}
+};
 
 export default Article;
