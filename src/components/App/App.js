@@ -13,7 +13,7 @@ import today from '../../dateHelper'
 export class App extends Component {
 
   logOut = () => {
-    this.props.logIn({})
+    this.logIn({})
     this.populateTweets([])
   }
 
