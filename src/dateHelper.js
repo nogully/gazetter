@@ -11,5 +11,6 @@ const objToday = new Date(),
   curSeconds = objToday.getSeconds() < 10 ? "0" + objToday.getSeconds() : objToday.getSeconds(),
   curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
 
-export const today = curHour + ":" + curMinute + "." + curSeconds + curMeridiem + " " + dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear;
+const today = curHour + ":" + curMinute + " " + curMeridiem + " on " + dayOfWeek + " the " + dayOfMonth + " of " + curMonth + ", " + curYear;
 
+export default today;
