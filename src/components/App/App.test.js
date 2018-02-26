@@ -1,19 +1,12 @@
+/* eslint-disable */
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App, mapStateToProps, mapDispatchToProps } from './App';
 
 describe('App', () => {
   it('should match snapshot', () => { 
-    const wrapper = shallow(<App tweets={ [] } user={ {} } />);
+    const wrapper = shallow(<App tweets={ [] } user={ {} } logIn={ jest.fn() } populateTweets={ jest.fn() }/>);
     expect(wrapper).toMatchSnapshot();
-  })
-
-  describe('signIn', () => {
-
-  })
-
-  describe('fetchTweets', () => {
-
   })
 
   describe('mapStateToProps', () => {
@@ -45,10 +38,17 @@ describe('App', () => {
   })
 
   describe('mapDispatchToProps', () => {
-    it('should call the Redux dispatch method', () => {
+    it('should call the Redux dispatch method with logIn', () => {
       const mockDispatch = jest.fn()
       const mapped = mapDispatchToProps(mockDispatch);
       mapped.logIn();
+      expect(mockDispatch).toHaveBeenCalled();
+    })
+
+    it('should call the Redux dispatch method with populateTweets', () => {
+      const mockDispatch = jest.fn()
+      const mapped = mapDispatchToProps(mockDispatch);
+      mapped.populateTweets();
       expect(mockDispatch).toHaveBeenCalled();
     })
   })

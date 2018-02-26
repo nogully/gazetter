@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News should match its snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <News
+    tweets={
+        Array [
+            Object {
+              "id": 1234,
+              "text": "Why tho, Jhun?",
+              "user": Object {
+                "display_name": "noragully",
+              },
+            },
+            Object {
+              "id": 5678,
+              "text": "What's good, fam?",
+              "user": Object {
+                "display_name": "yung-jhun",
+              },
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Article
+          tweet={
+                    Object {
+                              "id": 1234,
+                              "text": "Why tho, Jhun?",
+                              "user": Object {
+                                "display_name": "noragully",
+                              },
+                            }
+          }
+/>,
+        <Article
+          tweet={
+                    Object {
+                              "id": 5678,
+                              "text": "What's good, fam?",
+                              "user": Object {
+                                "display_name": "yung-jhun",
+                              },
+                            }
+          }
+/>,
+      ],
+      "className": "News",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1234",
+        "nodeType": "function",
+        "props": Object {
+          "tweet": Object {
+            "id": 1234,
+            "text": "Why tho, Jhun?",
+            "user": Object {
+              "display_name": "noragully",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "5678",
+        "nodeType": "function",
+        "props": Object {
+          "tweet": Object {
+            "id": 5678,
+            "text": "What's good, fam?",
+            "user": Object {
+              "display_name": "yung-jhun",
+            },
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Article
+            tweet={
+                        Object {
+                                    "id": 1234,
+                                    "text": "Why tho, Jhun?",
+                                    "user": Object {
+                                      "display_name": "noragully",
+                                    },
+                                  }
+            }
+/>,
+          <Article
+            tweet={
+                        Object {
+                                    "id": 5678,
+                                    "text": "What's good, fam?",
+                                    "user": Object {
+                                      "display_name": "yung-jhun",
+                                    },
+                                  }
+            }
+/>,
+        ],
+        "className": "News",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1234",
+          "nodeType": "function",
+          "props": Object {
+            "tweet": Object {
+              "id": 1234,
+              "text": "Why tho, Jhun?",
+              "user": Object {
+                "display_name": "noragully",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "5678",
+          "nodeType": "function",
+          "props": Object {
+            "tweet": Object {
+              "id": 5678,
+              "text": "What's good, fam?",
+              "user": Object {
+                "display_name": "yung-jhun",
+              },
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
