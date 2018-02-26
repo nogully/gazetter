@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
-import { array } from 'prop-types';
+import { array, object, func } from 'prop-types';
 import { auth, provider } from '../../firebase';
 import { logIn, populateTweets } from '../../actions/actions'
 import * as api from '../../apiCalls';
@@ -52,8 +52,10 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 Welcome.propTypes = {
-  tweets: array
+  tweets: array.isRequired, 
+  user: object.isRequired,
+  logIn: func.isRequired,
+  populateTweets: func.isRequired
 }
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Welcome))
