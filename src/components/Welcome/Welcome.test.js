@@ -70,8 +70,66 @@ describe('App', () => {
   })
 
   describe('fetchTweets', () => {
-    it('should call an api', () => {
+    let wrapper;
+    let mockTweets;
+
+    beforeEach(() => {
+      mockTweets = [
+              { id: 1234,
+                full_text: 'Jhun named best teacher ever', 
+                entities: { urls: [] }, 
+                user: { screen_name: 'nytimes' }, 
+                retweeted_status: 345,
+                favorite_count: 456 }, 
+              { id: 4567, 
+                full_text: 'What\'s good, fam?', 
+                entities: { urls: [] }, 
+                user: { screen_name: 'yung-jhun' }, 
+                retweeted_status: 0,
+                favorite_count: 2  }
+      ]
+    })
+
+    it('should call an api with the correct url', () => {
+      wrapper = shallow(<Welcome tweets={ [] } user={ {} } logIn={ jest.fn() } 
+                                 populateTweets={ jest.fn() } 
+                                 history={[]}/>);
       
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          json: () =>
+            Promise.resolve(mockTweets)
+        })
+      })
+      const expectedUrl = 'http://localhost:3001/api/gettweets'
+      wrapper.instance().fetchTweets();
+      expect(window.fetch).toHaveBeenCalledWith(expectedUrl)
+    })
+
+    it.skip('should populate the store with tweets if successful', async () => {
+      wrapper = shallow(<Welcome tweets={ [] } user={ {} } logIn={ jest.fn() } 
+                                 populateTweets={ jest.fn() } 
+                                 history={[]}/>);
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          json: () =>
+            Promise.resolve(mockTweets)
+        })
+      })
+      const result = wrapper.instance().fetchTweets();
+      expect(wrapper.props().populateTweets).toHaveBeenCalledWith(mockTweets)
+    })
+
+    it('should throw an error if unsuccessful', () => {
+      wrapper = shallow(<Welcome tweets={ [] } user={ {} } logIn={ jest.fn() } 
+                                 populateTweets={ jest.fn() } 
+                                 history={[]}/>);
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve( { status: 500 } ) 
+      })
+      const result = wrapper.instance().fetchTweets();
+      const expected = Error("Error getting tweets")
+      expect(result).rejects.toEqual(expected)
     })
   })
 

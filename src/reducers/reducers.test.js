@@ -46,5 +46,14 @@ describe('Reducers', () => {
       const expected = { display_name: 'yung-jhun' };
       expect(user(mockState, mockAction)).toEqual(expected);
     })
+
+    it('should accept a LOG_OUT action and clear out the value of the user in the Redux store', () => {
+      const mockState = { display_name: 'yung-jhun' };
+      const mockAction = {
+        type: 'LOG_OUT'    
+      }
+      const expected = {};
+      expect(user(mockState, mockAction)).toEqual(expected);
+    })
   })
 })

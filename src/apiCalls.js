@@ -1,6 +1,6 @@
 import { newsOutlets } from './newsOutlets';
 
-export const getTweets = async (token, secret) => {
+export const getTweets = async () => {
   try {
     const response = await fetch('http://localhost:3001/api/gettweets')
     if (response.status > 226) {
