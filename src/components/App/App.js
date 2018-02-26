@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as api from '../../apiCalls';
 import { connect } from 'react-redux';
 import './App.css';
 import { auth, provider } from '../../firebase';
@@ -13,6 +12,7 @@ import today from '../../dateHelper'
 export class App extends Component {
 
   logOut = () => {
+    auth.signOut(provider);
     this.logIn({})
     this.populateTweets([])
   }

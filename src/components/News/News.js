@@ -11,7 +11,7 @@ export class News extends Component {
     const { tweets } = this.props;
     return tweets.map( tweet => {
       return (
-        <Article tweet={tweet} />
+        <Article key={tweet.id} tweet={tweet} />
       )})
      
   }
