@@ -17,7 +17,7 @@ describe('apiCalls', () => {
                 user: { screen_name: 'yung-jhun' }, 
                 retweeted_status: 0,
                 favorite_count: 2  }
-            ]
+      ]
       window.fetch = jest.fn().mockImplementation(() => {
         return Promise.resolve({
           json: () =>
