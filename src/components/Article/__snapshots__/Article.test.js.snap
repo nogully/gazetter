@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article should match its snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Article
+    tweet={
+        Object {
+            "entities": Object {
+              "media": Array [
+                Object {
+                  "media_url": "http://awesome.com",
+                },
+              ],
+              "urls": Array [
+                Object {
+                  "expanded_url": "http://wow.com",
+                },
+              ],
+            },
+            "favorite_count": 456,
+            "full_text": "Jhun named best teacher ever",
+            "id": 1234,
+            "retweeted_status": 345,
+            "user": Object {
+              "screen_name": "nytimes",
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "1234",
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          alt="tweet"
+          src="http://awesome.com"
+/>,
+        <h2 />,
+        <p>
+          Jhun named best teacher ever
+</p>,
+        <section>
+          <a
+                    className="article-link"
+                    href="http://wow.com"
+                    target="_blank"
+          >
+                    <i
+                              className="fas fa-newspaper"
+                    />
+                     Read
+          </a>
+          <h5
+                    className="favorite"
+          >
+                    <i
+                              className="fas fa-heart"
+                    />
+                     
+                    456
+          </h5>
+</section>,
+      ],
+      "className": "tweet",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "tweet",
+          "src": "http://awesome.com",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Jhun named best teacher ever",
+        },
+        "ref": null,
+        "rendered": "Jhun named best teacher ever",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <a
+              className="article-link"
+              href="http://wow.com"
+              target="_blank"
+>
+              <i
+                            className="fas fa-newspaper"
+              />
+               Read
+</a>,
+            <h5
+              className="favorite"
+>
+              <i
+                            className="fas fa-heart"
+              />
+               
+              456
+</h5>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="fas fa-newspaper"
+/>,
+                " Read",
+              ],
+              "className": "article-link",
+              "href": "http://wow.com",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-newspaper",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              " Read",
+            ],
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="fas fa-heart"
+/>,
+                " ",
+                456,
+              ],
+              "className": "favorite",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-heart",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              " ",
+              456,
+            ],
+            "type": "h5",
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "1234",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="tweet"
+            src="http://awesome.com"
+/>,
+          <h2 />,
+          <p>
+            Jhun named best teacher ever
+</p>,
+          <section>
+            <a
+                        className="article-link"
+                        href="http://wow.com"
+                        target="_blank"
+            >
+                        <i
+                                    className="fas fa-newspaper"
+                        />
+                         Read
+            </a>
+            <h5
+                        className="favorite"
+            >
+                        <i
+                                    className="fas fa-heart"
+                        />
+                         
+                        456
+            </h5>
+</section>,
+        ],
+        "className": "tweet",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "tweet",
+            "src": "http://awesome.com",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Jhun named best teacher ever",
+          },
+          "ref": null,
+          "rendered": "Jhun named best teacher ever",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <a
+                className="article-link"
+                href="http://wow.com"
+                target="_blank"
+>
+                <i
+                                className="fas fa-newspaper"
+                />
+                 Read
+</a>,
+              <h5
+                className="favorite"
+>
+                <i
+                                className="fas fa-heart"
+                />
+                 
+                456
+</h5>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fas fa-newspaper"
+/>,
+                  " Read",
+                ],
+                "className": "article-link",
+                "href": "http://wow.com",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-newspaper",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                " Read",
+              ],
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fas fa-heart"
+/>,
+                  " ",
+                  456,
+                ],
+                "className": "favorite",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-heart",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                " ",
+                456,
+              ],
+              "type": "h5",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

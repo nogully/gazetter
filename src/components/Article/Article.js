@@ -1,5 +1,7 @@
 import React from 'react';
-import './Article.css'
+import './Article.css';
+import { object } from 'prop-types';
+
 
 const Article = ({tweet}) => {
   return (
@@ -17,6 +19,10 @@ const Article = ({tweet}) => {
     </article>
 
   )
+}
+
+Article.propTypes = {
+  tweet: object.isRequired
 }
 
 export default Article;
