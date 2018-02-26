@@ -6,11 +6,15 @@
   height: 100vh;
 }
 
-h1 {
+.App-title {
+  color: ghostwhite;
   font-family: 'UnifrakturCook', cursive; 
+  font-size: 4rem;
+  margin: 10px; 
+  text-decoration: none;
 }
 
-.User {
+.Welcome {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +25,17 @@ h1 {
 img {
   display: block;
   text-align: center;
+}
+
+#date {
+  color: #CCC;
+  text-align: center;
+  border-top: 1px solid ghostwhite;
+  padding-top: 10px;
+  width: 100%;
+  font-style: italic;
+  padding: 10px;
+  margin: 10px;
 }
 
 button {
@@ -35,15 +50,68 @@ button {
   word-spacing: 2px;
 }
 
+button:hover {
+  background-color: #0084b4;
+}
+
+button:active {
+  background-color: #1dcaff;
+}
+
+.loading-gif {
+  margin: 20px;
+}
+
 .App-header {
   background-color: #222;
-  height: 100px;
+  height: 150px;
   padding: 20px;
-  color: white; }
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-.App-title {
-  font-size: 4rem;
-  margin: 20px; }
+.user-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#motto, #tagline, #signout {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  color: #CCC;
+  text-decoration: none;
+}
+
+#signout:hover {
+  color: #00aced;
+}
+
+#signout:active {
+  color: #1dcaff;
+  text-decoration: underline;
+}
+
+#tagline {
+  font-size: 2em;
+  color: #444;
+}
 
 @keyframes App-logo-spin {
   from {

@@ -31,12 +31,16 @@ ShallowWrapper {
           </h1>
 </header>,
         <div
-          className="sign-in"
+          className="User"
 >
           <button
                     onClick={[Function]}
           >
-                    Sign in
+                    Sign in with 
+                    <i
+                              className="fab fa-twitter"
+                    />
+                     Twitter
           </button>
 </div>,
         <Route
@@ -80,26 +84,56 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <button
-            onClick={[Function]}
+          "children": Array [
+            <button
+              onClick={[Function]}
 >
-            Sign in
+              Sign in with 
+              <i
+                            className="fab fa-twitter"
+              />
+               Twitter
 </button>,
-          "className": "sign-in",
+            null,
+          ],
+          "className": "User",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Sign in",
-            "onClick": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Sign in with ",
+                <i
+                  className="fab fa-twitter"
+/>,
+                " Twitter",
+              ],
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Sign in with ",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fab fa-twitter",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              " Twitter",
+            ],
+            "type": "button",
           },
-          "ref": null,
-          "rendered": "Sign in",
-          "type": "button",
-        },
+          null,
+        ],
         "type": "div",
       },
       Object {
@@ -134,12 +168,16 @@ ShallowWrapper {
             </h1>
 </header>,
           <div
-            className="sign-in"
+            className="User"
 >
             <button
                         onClick={[Function]}
             >
-                        Sign in
+                        Sign in with 
+                        <i
+                                    className="fab fa-twitter"
+                        />
+                         Twitter
             </button>
 </div>,
           <Route
@@ -183,26 +221,56 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <button
-              onClick={[Function]}
+            "children": Array [
+              <button
+                onClick={[Function]}
 >
-              Sign in
+                Sign in with 
+                <i
+                                className="fab fa-twitter"
+                />
+                 Twitter
 </button>,
-            "className": "sign-in",
+              null,
+            ],
+            "className": "User",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Sign in",
-              "onClick": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Sign in with ",
+                  <i
+                    className="fab fa-twitter"
+/>,
+                  " Twitter",
+                ],
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sign in with ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fab fa-twitter",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                " Twitter",
+              ],
+              "type": "button",
             },
-            "ref": null,
-            "rendered": "Sign in",
-            "type": "button",
-          },
+            null,
+          ],
           "type": "div",
         },
         Object {

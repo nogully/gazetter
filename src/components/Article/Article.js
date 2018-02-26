@@ -12,7 +12,7 @@ const Article = ({tweet}) => {
         <a className="article-link" href={ tweet.entities.urls[0].expanded_url } target="_blank">
           <i className="fas fa-newspaper"></i> Read
         </a> : null }
-      <h5><i className="fas fa-heart"></i> {tweet.favorite_count}</h5>
+      <h5 className="favorite"><i className="fas fa-heart"></i> {tweet.favorite_count}</h5>
       </section>
     </article>
 
