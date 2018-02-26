@@ -1,3 +1,4 @@
+/* eslint-disable */
 const objToday = new Date(),
   weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] ,
   dayOfWeek = weekday[objToday.getDay()],
