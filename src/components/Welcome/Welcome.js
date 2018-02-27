@@ -15,17 +15,19 @@ export class Welcome extends Component {
     };
   }
 
-  signIn = () =>  {  
+  signIn = async () =>  {  
     this.setState( {loading: true} );
-    return auth.signInWithPopup(provider)
-      .then((user) => {
-        this.props.logIn(user);
-      }).then(this.fetchTweets());
+    const user = await auth.signInWithPopup(provider)
+    this.props.logIn(await user);
+    const { credential } = await user;
+    this.fetchTweets(credential)
+    console.log(user)
   }
 
-  fetchTweets = async () => {
+  fetchTweets = async (credential) => {
+    const { accessToken, secret } = credential;
     try {
-      const tweets = await api.getTweets();
+      const tweets = await api.getTweets(accessToken, secret);
       this.props.populateTweets(tweets);
       this.props.history.push('/news');
     } catch (error) {
