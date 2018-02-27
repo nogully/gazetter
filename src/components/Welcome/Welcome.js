@@ -27,7 +27,7 @@ export class Welcome extends Component {
   fetchTweets = async (credential) => {
     const { accessToken, secret } = credential;
     try {
-      const tweets = await api.getTweets();
+      const tweets = await api.getTweets(accessToken, secret);
       this.props.populateTweets(tweets);
       this.props.history.push('/news');
     } catch (error) {

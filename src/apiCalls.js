@@ -3,7 +3,7 @@ import { newsOutlets } from './newsOutlets';
 export const getTweets = async (token, secret) => {
   try {
     const response = await fetch('http://localhost:3001/api/gettweets', {
-      method: 'GET',
+      method: 'POST',
       body: JSON.stringify({token, secret}),
       headers: { 'Content-Type': 'application/json' }
     })
