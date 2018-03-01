@@ -19,15 +19,14 @@ export class Welcome extends Component {
     this.setState( {loading: true} );
     const user = await auth.signInWithPopup(provider)
     this.props.logIn(await user);
-    const { credential } = await user;
-    this.fetchTweets(credential)
-    console.log(user)
+    // const { credential } = await user;
+    this.fetchTweets()
+    // console.log(user)
   }
 
-  fetchTweets = async (credential) => {
-    const { accessToken, secret } = credential;
+  fetchTweets = async () => {
     try {
-      const tweets = await api.getTweets(accessToken, secret);
+      const tweets = await api.getTweets();
       this.props.populateTweets(tweets);
       this.props.history.push('/news');
     } catch (error) {
@@ -38,7 +37,7 @@ export class Welcome extends Component {
   render() {
     return (
       <div className="Welcome">
-        <p id='tagline'>&quot;All the news that&apos;s fit to tweet&quot;</p>
+        <p id='tagline'>&quot;All the news that&apos;s fit to pwint&quot;</p>
         <button onClick={this.signIn}>Sign in with <i className="fab fa-twitter"></i> Twitter</button>
         { this.state.loading && !this.props.tweets.length ? 
           <img className="loading-gif"src="./newspapers.gif" alt="newspapers" /> : null }

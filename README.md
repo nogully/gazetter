@@ -27,7 +27,8 @@ Class project for 3rd quarter of the Turing School Front End Engineering program
 - Clone the backend and ditto: https://github.com/nogully/gazetter-backend
 - Run the back end with `npm start` before you start the frontend
 - You'll have to handle your own firebase authentication:
-```import firebase from 'firebase';
+```
+import firebase from 'firebase';
 
 const config = {
     apiKey: "Fill this in",
@@ -48,5 +49,6 @@ export const signIn = () => firebase.auth().signInWithPopup(provider);
 
 export const signOut = () => firebase.auth().signOut(provider);
 
-export default firebase;```
+export default firebase;
+```
 
