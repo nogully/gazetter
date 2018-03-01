@@ -9,10 +9,11 @@ import {addBookmark, removeBookmark} from '../../actions/actions'
 export class News extends Component {
 
   handleClick = (event) => {
+    console.log('click')
     const { id } = event.target
     const { tweets, bookmarks } = this.props;
     const clicked = tweets.find(tweet => tweet.id === parseInt(id, 10));
-    const tweet = Object.assign({}, { ...clicked }, { user_id });
+    const tweet = Object.assign({}, { ...clicked });
     if (!bookmarks.find(tweet => tweet.id === parseInt(id, 10))) {
       this.props.addBookmark(tweet);
     } else {
