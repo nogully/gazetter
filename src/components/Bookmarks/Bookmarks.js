@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import './News.css';
+import '../News/News.css';
 import { array } from 'prop-types';
 import Article from '../Article/Article';
 import {addBookmark, removeBookmark} from '../../actions/actions'
 
-export class News extends Component {
 
-  handleClick = (event) => {
+export class Bookmarks extends Component {
+
+handleClick = (event) => {
     console.log('click')
     const { id } = event.target
     const { tweets, bookmarks } = this.props;
@@ -22,15 +23,10 @@ export class News extends Component {
   }
 
   tweetCards = () => {
-    const { tweets, bookmarks } = this.props;
-    return tweets.map( tweet => {
-      const bookmark = bookmarks
-        .map(tweet => tweet.id)
-        .includes(tweet.id)
-        ? 'bookmark'
-        : '';
+    const { bookmarks } = this.props;
+    return bookmarks.map( tweet => {
       return (
-        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} bookmark={bookmark}/>
+        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} />
       );
     });
   }; 
@@ -54,8 +50,8 @@ export const mapDispatchToProps = (dispatch) => ({
   removeBookmark: tweet => dispatch(removeBookmark(tweet))
 })
 
-News.propTypes = {
+Bookmarks.propTypes = {
   tweets: array.isRequired
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(News));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Bookmarks));

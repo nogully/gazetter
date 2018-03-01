@@ -8,6 +8,7 @@ import Welcome from '../Welcome/Welcome.js';
 import { Route, withRouter, NavLink } from 'react-router-dom';
 import today from '../../dateHelper';
 import { array, object, func } from 'prop-types';
+import Bookmarks from '../Bookmarks/Bookmarks'
 
 export class App extends Component {
   logOut = () => {
@@ -22,7 +23,7 @@ export class App extends Component {
       <div className='user-header'>
         <NavLink to='/' className="App-title">Gazetter</NavLink>
         <div className="header-bottom">
-          <p id='motto'>All the news that&apos;s fit to tweet</p>
+          <p id='motto'>All the news that&apos;s fit to pwint</p>
           <p id="date">Last updated: { today }</p>
           <NavLink to="/" id="signout" onClick={this.logOut}>
             Sign out @{user}
@@ -40,8 +41,13 @@ export class App extends Component {
           { tweets.length ? this.fillHeader() : 
             <NavLink to='/' className="App-title">Gazetter</NavLink> }
         </header>
+        <section className="section-title">
+          {tweets.length ? <NavLink to='/news' className="section">News</NavLink> : null }
+          {tweets.length ? <NavLink to='/bookmarks' className="section">Bookmarks</NavLink> : null }
+        </section>
         <Route exact path='/' component={Welcome} />
         <Route path='/news' component={News} />
+        <Route path='/bookmarks' component={Bookmarks} />
       </div>
     );
   }

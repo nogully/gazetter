@@ -61,5 +61,6 @@ export const newsOutlets = [
 'newrepublic', 
 'denverpost', 
 'vanityfair',
-'newshour'
+'newshour', 
+'ajenews'
 ]
