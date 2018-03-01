@@ -22,10 +22,15 @@ export class News extends Component {
   }
 
   tweetCards = () => {
-    const { tweets } = this.props;
+    const { tweets, bookmarks } = this.props;
     return tweets.map( tweet => {
+      const bookmark = bookmarks
+        .map(tweet => tweet.id)
+        .includes(tweet.id)
+        ? 'bookmark'
+        : '';
       return (
-        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} />
+        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} bookmark={bookmark}/>
       );
     });
   }; 

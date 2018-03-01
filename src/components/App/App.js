@@ -8,6 +8,7 @@ import Welcome from '../Welcome/Welcome.js';
 import { Route, withRouter, NavLink } from 'react-router-dom';
 import today from '../../dateHelper';
 import { array, object, func } from 'prop-types';
+import Bookmarks from '../Bookmarks/Bookmarks'
 
 export class App extends Component {
   logOut = () => {
@@ -42,10 +43,11 @@ export class App extends Component {
         </header>
         <section className="section-title">
           {tweets.length ? <NavLink to='/news' className="section">News</NavLink> : null }
-          {tweets.length ? <NavLink to='/news' className="section">Bookmarks</NavLink> : null }
+          {tweets.length ? <NavLink to='/bookmarks' className="section">Bookmarks</NavLink> : null }
         </section>
         <Route exact path='/' component={Welcome} />
         <Route path='/news' component={News} />
+        <Route path='/bookmarks' component={Bookmarks} />
       </div>
     );
   }

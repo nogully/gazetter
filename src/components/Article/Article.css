@@ -32,3 +32,11 @@ h5 {
 img {
   border-bottom: 10px;
 }
+
+.bookmark {
+  background-color: #c0deed;
+}
+
+.bookmark .article-link {
+  color: #444;
+}

@@ -3,7 +3,7 @@ import './Article.css';
 import { object, func } from 'prop-types';
 
 
-const Article = ({tweet, handleClick }) => {
+const Article = ({tweet, handleClick, bookmark }) => {
   const link = tweet.entities.urls[0].expanded_url;
 
   const goToLink = () => { 
@@ -11,7 +11,7 @@ const Article = ({tweet, handleClick }) => {
   }
 
   return (
-    <article className="tweet" key={tweet.id}>
+    <article className={'tweet ' + bookmark }  key={tweet.id}>
       { tweet.entities.media ? <img src={tweet.entities.media[0].media_url} onClick={ goToLink } alt="tweet"/> : null }
       <h2 onClick={ goToLink }>{tweet.user.name}</h2> 
       <p onClick={ goToLink }>{tweet.full_text}</p> 
