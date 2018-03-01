@@ -2,16 +2,31 @@ import { newsOutlets } from './newsOutlets';
 
 export const getTweets = async (token, secret) => {
   try {
-    const response = await fetch('http://localhost:3001/api/gettweets', {
-      method: 'POST',
-      body: JSON.stringify({token, secret}),
-      headers: { 'Content-Type': 'application/json' }
-    })
+    const response = await fetch('http://localhost:3001/api/gettweets')
     if (response.status > 226) {
       throw new Error("Error getting tweets");
     } else {
       const parsed = await response.json();
       return cleanTweets(parsed);  
+    }
+  } catch (error) { 
+    throw (error);
+  }
+};
+
+export const trendingTweets = async (user) => {
+  const { token, secret, username } = user;
+  try {
+    const response = await fetch('http://localhost:3001/api/user', {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: { 'Content-Type': 'application/json' }
+    })
+    if (response.status > 226) {
+      throw new Error("Error authenticating");
+    } else {
+      const parsed = await response.json();
+      console.log(cleanTweets(parsed));  
     }
   } catch (error) { 
     throw (error);
