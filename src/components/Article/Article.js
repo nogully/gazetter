@@ -3,7 +3,7 @@ import './Article.css';
 import { object } from 'prop-types';
 
 
-const Article = ({tweet}) => {
+const Article = ({tweet, handleClick }) => {
   const link = tweet.entities.urls[0].expanded_url;
 
   const goToLink = () => { 
@@ -17,7 +17,7 @@ const Article = ({tweet}) => {
       <p>{tweet.full_text}</p> 
       <section >
         { tweet.entities.urls.length ? 
-          <p className="article-link" onClick={ bookmarkArticle }>
+          <p className="article-link" id={tweet.id} onClick={ handleClick }>
             <i className="fas fa-newspaper"></i> Bookmark
           </p> : null }
         <h5 className="favorite"><i className="fas fa-heart"></i> {tweet.favorite_count}</h5>

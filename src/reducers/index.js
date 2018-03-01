@@ -4,7 +4,8 @@ import tweets from './tweetReducer'
 
 const rootReducer = combineReducers({
   user, 
-  tweets
+  tweets, 
+  bookmarks
 });
 
 export default rootReducer;
