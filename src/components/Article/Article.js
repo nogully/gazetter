@@ -4,23 +4,29 @@ import { object, func } from 'prop-types';
 
 
 const Article = ({tweet, handleClick, bookmark }) => {
-  const link = tweet.entities.urls[0].expanded_url;
+  let link;
+  if (tweet.entities.urls.length) {
+    link = tweet.entities.urls[0].expanded_url;
+  }
 
   const goToLink = () => { 
-    window.open(link, "_blank")
+    if (link) {
+      window.open(link, "_blank")
+    }
   }
 
   return (
     <article className={'tweet ' + bookmark }  key={tweet.id}>
       { tweet.entities.media ? <img src={tweet.entities.media[0].media_url} onClick={ goToLink } alt="tweet"/> : null }
-      <h2 onClick={ goToLink }>{tweet.user.name}</h2> 
+      <h2 id={bookmark} onClick={ goToLink }>{tweet.user.name}</h2> 
       <p onClick={ goToLink }>{tweet.full_text}</p> 
-      <section >
-        { tweet.entities.urls.length ? 
+      <section > 
           <p className="article-link" id={tweet.id} onClick={ handleClick }>
-            <i className="fas fa-newspaper"></i> Bookmark
-          </p> : null }
-        <h5 className="favorite"><i className="fas fa-heart"></i> {tweet.favorite_count}</h5>
+            <i className="fas fa-plus-circle"></i> Bookmark
+          </p> 
+        <h5 className="favorite">
+          <i className="fas fa-retweet" id="twitter-icons"></i> {tweet.retweet_count}
+          <i className="fas fa-heart" id="twitter-icons"></i> {tweet.favorite_count}</h5>
       </section>
     </article>
   );
@@ -32,3 +38,4 @@ Article.propTypes = {
 };
 
 export default Article;
+

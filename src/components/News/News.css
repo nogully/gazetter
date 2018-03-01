@@ -14,12 +14,20 @@
   width: 300px;
 }
 
+.tweet:hover {
+  background-color: #DEF2FC;
+}
+
 p {
   font-family: 'Merriweather', serif;
   margin: 0px;
   line-height: 1.5em;
   text-align: left;
-  }
+}
+
+/*p:hover {
+  color: #555;
+}*/
 
 h2 {
   font-family: 'Merriweather', serif;
@@ -28,6 +36,14 @@ h2 {
   font-weight: 400;
   font-style: italic;
   text-align: left;
+}
+
+h2:hover {
+  color: #0084b4;
+}
+
+h2 .bookmark {
+  color: #0084b4;
 }
 
 h5 {

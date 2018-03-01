@@ -26,3 +26,9 @@ export const removeBookmark = tweet => ({
   type: 'REMOVE_BOOKMARK', 
   tweet
 })
+
+
+export const populateTrending = tweets => ({
+  type: 'POPULATE_TRENDING',
+  tweets
+})

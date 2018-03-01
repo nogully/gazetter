@@ -14,19 +14,14 @@ export const getTweets = async (token, secret) => {
   }
 };
 
-export const trendingTweets = async (user) => {
-  const { token, secret, username } = user;
+export const trendingTweets = async () => {
   try {
-    const response = await fetch('http://localhost:3001/api/user', {
-      method: 'POST',
-      body: JSON.stringify(user),
-      headers: { 'Content-Type': 'application/json' }
-    })
+    const response = await fetch('http://localhost:3001/api/trending')
     if (response.status > 226) {
       throw new Error("Error authenticating");
     } else {
       const parsed = await response.json();
-      console.log(cleanTweets(parsed));  
+      console.log(parsed);  
     }
   } catch (error) { 
     throw (error);
@@ -45,7 +40,7 @@ export const cleanTweets = (tweets) => {
         full_text,
         entities, 
         user, 
-        retweeted_status, 
+        retweet_count, 
         favorite_count
       } = tweet;
       return {
@@ -53,7 +48,7 @@ export const cleanTweets = (tweets) => {
         full_text, 
         entities, 
         user, 
-        retweeted_status, 
+        retweet_count, 
         favorite_count
       }
     }).sort((a, b) => b.favorite_count - a.favorite_count);

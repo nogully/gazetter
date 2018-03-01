@@ -4,12 +4,18 @@ import { withRouter } from 'react-router-dom';
 import '../News/News.css';
 import { array } from 'prop-types';
 import Article from '../Article/Article';
-import {addBookmark, removeBookmark} from '../../actions/actions'
+import { addBookmark, removeBookmark } from '../../actions/actions'
+import * as api from '../../apiCalls';
 
 
-export class Bookmarks extends Component {
+export class Local extends Component {
 
-handleClick = (event) => {
+  getLocal = async () => {
+    const response = await api.trendingTweets();
+    console.log(response)
+  }
+
+  handleClick = (event) => {
     console.log('click')
     const { id } = event.target
     const { tweets, bookmarks } = this.props;
@@ -23,17 +29,18 @@ handleClick = (event) => {
   }
 
   tweetCards = () => {
-    const { bookmarks } = this.props;
-    return bookmarks.map( tweet => {
+    const { trending } = this.props;
+    return trending.map( tweet => {
       return (
-        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} bookmark={"bookmark"}/>
+        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} />
       );
     });
   }; 
 
   render() {
     return (
-      <div className="News">
+      <div className="Local">
+        <button onClick={this.getLocal}>Refresh</button>
         { this.tweetCards() }
       </div>
     );
@@ -50,8 +57,8 @@ export const mapDispatchToProps = (dispatch) => ({
   removeBookmark: tweet => dispatch(removeBookmark(tweet))
 })
 
-Bookmarks.propTypes = {
+Local.propTypes = {
   tweets: array.isRequired
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Bookmarks));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Local));

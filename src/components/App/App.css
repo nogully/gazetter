@@ -142,6 +142,15 @@ button:focus {
   font-size: 1.5rem;
 }
 
+.section-active {
+  font-family: 'Merriweather', serif;
+  text-decoration: none;
+  color: #0084b4;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
 .section:hover {
   color: #0084b4;
 }

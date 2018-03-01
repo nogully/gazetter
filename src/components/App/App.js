@@ -9,6 +9,8 @@ import { Route, withRouter, NavLink } from 'react-router-dom';
 import today from '../../dateHelper';
 import { array, object, func } from 'prop-types';
 import Bookmarks from '../Bookmarks/Bookmarks'
+import Trending from '../Trending/Trending'
+import Local from '../Local/Local'
 
 export class App extends Component {
   logOut = () => {
@@ -42,12 +44,16 @@ export class App extends Component {
             <NavLink to='/' className="App-title">Gazetter</NavLink> }
         </header>
         <section className="section-title">
-          {tweets.length ? <NavLink to='/news' className="section">News</NavLink> : null }
-          {tweets.length ? <NavLink to='/bookmarks' className="section">Bookmarks</NavLink> : null }
+          { tweets.length ? <NavLink to='/local' className="section" activeClassName="section-active">Local</NavLink>  : null }
+          { tweets.length ? <NavLink to='/news' className="section" activeClassName="section-active">Latest News</NavLink> : null }
+          { tweets.length ? <NavLink to='/trending' className="section" activeClassName="section-active">Trending</NavLink>  : null }
+          { tweets.length ? <NavLink to='/bookmarks' className="section" activeClassName="section-active">Bookmarks</NavLink> : null }
         </section>
         <Route exact path='/' component={Welcome} />
         <Route path='/news' component={News} />
         <Route path='/bookmarks' component={Bookmarks} />
+        <Route path='/trending' component={Trending} />
+        <Route path='/local' component={Local} />
       </div>
     );
   }
