@@ -14,7 +14,7 @@ export class News extends Component {
         <Article key={tweet.id} tweet={tweet} />
       );
     });
-  };
+  }; 
 
   render() {
     return (

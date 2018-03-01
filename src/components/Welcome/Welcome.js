@@ -19,7 +19,6 @@ export class Welcome extends Component {
     this.setState( {loading: true} );
     const user = await auth.signInWithPopup(provider)
     this.props.logIn(await user);
-    // const { credential } = await user;
     this.fetchTweets()
     // console.log(user)
   }
