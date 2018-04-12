@@ -8,12 +8,12 @@
 - The desktop design will mimic that of a print newspaper. 
 - The mobile site will have some of the same flourishes as the desktop but be optimized for people on the go.
 
-### Stack
+### Stack / Learning Goals
 - React
 - Redux
 - Router
-- Firebase / Oauth
-- Express / Node.js backend at https://github.com/nogully/gazetter-backend
+- Firebase Authentication (learned solo)
+- Express / Node.js backend at https://github.com/nogully/gazetter-backend (learned solo)
 - Testing suite in Jest and Enzyme
 
 ### Screenshots
