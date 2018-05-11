@@ -44,35 +44,47 @@ ShallowWrapper {
       "children": Array [
         <img
           alt="tweet"
+          onClick={[Function]}
           src="http://awesome.com"
 />,
-        <h2 />,
-        <p>
+        <h2
+          id={undefined}
+          onClick={[Function]}
+/>,
+        <p
+          onClick={[Function]}
+>
           Jhun named best teacher ever
 </p>,
         <section>
-          <a
+          <p
                     className="article-link"
-                    href="http://wow.com"
-                    target="_blank"
+                    id={1234}
+                    onClick={undefined}
           >
                     <i
-                              className="fas fa-newspaper"
+                              className="fas fa-plus-circle"
                     />
-                     Read
-          </a>
+                     Bookmark
+          </p>
           <h5
                     className="favorite"
           >
                     <i
+                              className="fas fa-retweet"
+                              id="twitter-icons"
+                    />
+                     
+                    <i
                               className="fas fa-heart"
+                              id="twitter-icons"
                     />
                      
                     456
           </h5>
 </section>,
       ],
-      "className": "tweet",
+      "className": "tweet undefined",
     },
     "ref": null,
     "rendered": Array [
@@ -82,6 +94,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "tweet",
+          "onClick": [Function],
           "src": "http://awesome.com",
         },
         "ref": null,
@@ -94,6 +107,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": undefined,
+          "id": undefined,
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -105,6 +120,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Jhun named best teacher ever",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": "Jhun named best teacher ever",
@@ -116,21 +132,27 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <a
+            <p
               className="article-link"
-              href="http://wow.com"
-              target="_blank"
+              id={1234}
+              onClick={undefined}
 >
               <i
-                            className="fas fa-newspaper"
+                            className="fas fa-plus-circle"
               />
-               Read
-</a>,
+               Bookmark
+</p>,
             <h5
               className="favorite"
 >
               <i
+                            className="fas fa-retweet"
+                            id="twitter-icons"
+              />
+               
+              <i
                             className="fas fa-heart"
+                            id="twitter-icons"
               />
                
               456
@@ -146,13 +168,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <i
-                  className="fas fa-newspaper"
+                  className="fas fa-plus-circle"
 />,
-                " Read",
+                " Bookmark",
               ],
               "className": "article-link",
-              "href": "http://wow.com",
-              "target": "_blank",
+              "id": 1234,
+              "onClick": undefined,
             },
             "ref": null,
             "rendered": Array [
@@ -161,15 +183,15 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "fas fa-newspaper",
+                  "className": "fas fa-plus-circle",
                 },
                 "ref": null,
                 "rendered": null,
                 "type": "i",
               },
-              " Read",
+              " Bookmark",
             ],
-            "type": "a",
+            "type": "p",
           },
           Object {
             "instance": null,
@@ -178,7 +200,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <i
+                  className="fas fa-retweet"
+                  id="twitter-icons"
+/>,
+                " ",
+                undefined,
+                <i
                   className="fas fa-heart"
+                  id="twitter-icons"
 />,
                 " ",
                 456,
@@ -192,7 +221,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "className": "fas fa-retweet",
+                  "id": "twitter-icons",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              " ",
+              undefined,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
                   "className": "fas fa-heart",
+                  "id": "twitter-icons",
                 },
                 "ref": null,
                 "rendered": null,
@@ -218,35 +262,47 @@ ShallowWrapper {
         "children": Array [
           <img
             alt="tweet"
+            onClick={[Function]}
             src="http://awesome.com"
 />,
-          <h2 />,
-          <p>
+          <h2
+            id={undefined}
+            onClick={[Function]}
+/>,
+          <p
+            onClick={[Function]}
+>
             Jhun named best teacher ever
 </p>,
           <section>
-            <a
+            <p
                         className="article-link"
-                        href="http://wow.com"
-                        target="_blank"
+                        id={1234}
+                        onClick={undefined}
             >
                         <i
-                                    className="fas fa-newspaper"
+                                    className="fas fa-plus-circle"
                         />
-                         Read
-            </a>
+                         Bookmark
+            </p>
             <h5
                         className="favorite"
             >
                         <i
+                                    className="fas fa-retweet"
+                                    id="twitter-icons"
+                        />
+                         
+                        <i
                                     className="fas fa-heart"
+                                    id="twitter-icons"
                         />
                          
                         456
             </h5>
 </section>,
         ],
-        "className": "tweet",
+        "className": "tweet undefined",
       },
       "ref": null,
       "rendered": Array [
@@ -256,6 +312,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "tweet",
+            "onClick": [Function],
             "src": "http://awesome.com",
           },
           "ref": null,
@@ -268,6 +325,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": undefined,
+            "id": undefined,
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -279,6 +338,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Jhun named best teacher ever",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Jhun named best teacher ever",
@@ -290,21 +350,27 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <a
+              <p
                 className="article-link"
-                href="http://wow.com"
-                target="_blank"
+                id={1234}
+                onClick={undefined}
 >
                 <i
-                                className="fas fa-newspaper"
+                                className="fas fa-plus-circle"
                 />
-                 Read
-</a>,
+                 Bookmark
+</p>,
               <h5
                 className="favorite"
 >
                 <i
+                                className="fas fa-retweet"
+                                id="twitter-icons"
+                />
+                 
+                <i
                                 className="fas fa-heart"
+                                id="twitter-icons"
                 />
                  
                 456
@@ -320,13 +386,13 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <i
-                    className="fas fa-newspaper"
+                    className="fas fa-plus-circle"
 />,
-                  " Read",
+                  " Bookmark",
                 ],
                 "className": "article-link",
-                "href": "http://wow.com",
-                "target": "_blank",
+                "id": 1234,
+                "onClick": undefined,
               },
               "ref": null,
               "rendered": Array [
@@ -335,15 +401,15 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "fas fa-newspaper",
+                    "className": "fas fa-plus-circle",
                   },
                   "ref": null,
                   "rendered": null,
                   "type": "i",
                 },
-                " Read",
+                " Bookmark",
               ],
-              "type": "a",
+              "type": "p",
             },
             Object {
               "instance": null,
@@ -352,7 +418,14 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <i
+                    className="fas fa-retweet"
+                    id="twitter-icons"
+/>,
+                  " ",
+                  undefined,
+                  <i
                     className="fas fa-heart"
+                    id="twitter-icons"
 />,
                   " ",
                   456,
@@ -366,7 +439,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "fas fa-retweet",
+                    "id": "twitter-icons",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                " ",
+                undefined,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
                     "className": "fas fa-heart",
+                    "id": "twitter-icons",
                   },
                   "ref": null,
                   "rendered": null,

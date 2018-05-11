@@ -35,6 +35,11 @@ ShallowWrapper {
                     Gazetter
           </NavLink>
 </header>,
+        <section
+          className="section-title"
+>
+          
+</section>,
         <Route
           component={[Function]}
           exact={true}
@@ -43,6 +48,18 @@ ShallowWrapper {
         <Route
           component={[Function]}
           path="/news"
+/>,
+        <Route
+          component={[Function]}
+          path="/bookmarks"
+/>,
+        <Route
+          component={[Function]}
+          path="/trending"
+/>,
+        <Route
+          component={[Function]}
+          path="/local"
 />,
       ],
       "className": "App",
@@ -85,6 +102,28 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            null,
+            null,
+            null,
+            null,
+          ],
+          "className": "section-title",
+        },
+        "ref": null,
+        "rendered": Array [
+          null,
+          null,
+          null,
+          null,
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "component": [Function],
@@ -102,6 +141,42 @@ ShallowWrapper {
         "props": Object {
           "component": [Function],
           "path": "/news",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/bookmarks",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/trending",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/local",
         },
         "ref": null,
         "rendered": null,
@@ -129,6 +204,11 @@ ShallowWrapper {
                         Gazetter
             </NavLink>
 </header>,
+          <section
+            className="section-title"
+>
+            
+</section>,
           <Route
             component={[Function]}
             exact={true}
@@ -137,6 +217,18 @@ ShallowWrapper {
           <Route
             component={[Function]}
             path="/news"
+/>,
+          <Route
+            component={[Function]}
+            path="/bookmarks"
+/>,
+          <Route
+            component={[Function]}
+            path="/trending"
+/>,
+          <Route
+            component={[Function]}
+            path="/local"
 />,
         ],
         "className": "App",
@@ -179,6 +271,28 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              null,
+              null,
+              null,
+              null,
+            ],
+            "className": "section-title",
+          },
+          "ref": null,
+          "rendered": Array [
+            null,
+            null,
+            null,
+            null,
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "component": [Function],
@@ -196,6 +310,42 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "path": "/news",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/bookmarks",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/trending",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/local",
           },
           "ref": null,
           "rendered": null,

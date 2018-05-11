@@ -26,7 +26,7 @@ ShallowWrapper {
         <p
           id="tagline"
 >
-          "All the news that's fit to tweet"
+          "All the news that's fit to pwint"
 </p>,
         <button
           onClick={[Function]}
@@ -48,11 +48,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "\\"All the news that's fit to tweet\\"",
+          "children": "\\"All the news that's fit to pwint\\"",
           "id": "tagline",
         },
         "ref": null,
-        "rendered": "\\"All the news that's fit to tweet\\"",
+        "rendered": "\\"All the news that's fit to pwint\\"",
         "type": "p",
       },
       Object {
@@ -101,7 +101,7 @@ ShallowWrapper {
           <p
             id="tagline"
 >
-            "All the news that's fit to tweet"
+            "All the news that's fit to pwint"
 </p>,
           <button
             onClick={[Function]}
@@ -123,11 +123,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "\\"All the news that's fit to tweet\\"",
+            "children": "\\"All the news that's fit to pwint\\"",
             "id": "tagline",
           },
           "ref": null,
-          "rendered": "\\"All the news that's fit to tweet\\"",
+          "rendered": "\\"All the news that's fit to pwint\\"",
           "type": "p",
         },
         Object {

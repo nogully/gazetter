@@ -34,9 +34,19 @@ img {
 }
 
 .bookmark {
-  background-color: #c0deed;
+  border: 1px solid #c0deed;
+  background-color: #FFF;
+  box-shadow: 5px 5px 5px #CCC;
 }
 
 .bookmark .article-link {
   color: #444;
+}
+
+#twitter-icons {
+  margin-left: 15px;
+}
+
+#bookmark {
+  color: #0084b4;
 }

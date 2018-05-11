@@ -4,12 +4,18 @@ import { withRouter } from 'react-router-dom';
 import '../News/News.css';
 import { array } from 'prop-types';
 import Article from '../Article/Article';
-import {addBookmark, removeBookmark} from '../../actions/actions'
+import {addBookmark, removeBookmark, populateTrending} from '../../actions/actions'
+import * as api from '../../apiCalls';
 
 
-export class Bookmarks extends Component {
+export class Trending extends Component {
 
-handleClick = (event) => {
+  getTrending = async () => {
+    const response = await api.trendingTweets();
+    console.log(response)
+  }
+
+  handleClick = (event) => {
     console.log('click')
     const { id } = event.target
     const { tweets, bookmarks } = this.props;
@@ -23,17 +29,18 @@ handleClick = (event) => {
   }
 
   tweetCards = () => {
-    const { bookmarks } = this.props;
-    return bookmarks.map( tweet => {
+    const { trending } = this.props;
+    return trending.map( tweet => {
       return (
-        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} bookmark={"bookmark"}/>
+        <Article key={tweet.id} tweet={tweet} handleClick={this.handleClick} />
       );
     });
   }; 
 
   render() {
     return (
-      <div className="News">
+      <div className="Trending">
+        <button onClick={this.getTrending}>Refresh</button>
         { this.tweetCards() }
       </div>
     );
@@ -42,16 +49,18 @@ handleClick = (event) => {
 
 export const mapStateToProps = (store) => ({
   tweets: store.tweets, 
-  bookmarks: store.bookmarks
+  bookmarks: store.bookmarks,
+  trending: store.trending
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   addBookmark: tweet => dispatch(addBookmark(tweet)), 
-  removeBookmark: tweet => dispatch(removeBookmark(tweet))
+  removeBookmark: tweet => dispatch(removeBookmark(tweet)), 
+  populateTrending: () => dispatch(populateTrending())
 })
 
-Bookmarks.propTypes = {
+Trending.propTypes = {
   tweets: array.isRequired
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Bookmarks));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Trending));
